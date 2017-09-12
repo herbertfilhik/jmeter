@@ -1,0 +1,226 @@
+{
+	"id": "2b5f4755-fbd2-0542-7182-ccf238174859",
+	"name": "QA - Automacao",
+	"description": "",
+	"order": [
+		"54db6055-b056-9668-017c-49b817abc06f",
+		"daf26ec4-58f2-1fd2-60d3-61478b798927",
+		"47cdaf5e-b4c8-4f8d-0c64-af6fc752d627",
+		"49b7882e-d563-e013-b768-c1cc21e49ace",
+		"13ee2ff3-5249-7c48-6dbc-964da8ef3ad4",
+		"ec89e278-3346-6b97-182b-81386e77ef55"
+	],
+	"folders": [],
+	"timestamp": 1504736160265,
+	"owner": "881755",
+	"public": false,
+	"requests": [
+		{
+			"id": "13ee2ff3-5249-7c48-6dbc-964da8ef3ad4",
+			"headers": "access_token: {{QA-AccessToken}}\n",
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{QA-AccessToken}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://grupoltm-qa-automation.getsandbox.com/users/7a53e988-46b1-426b-bade-a621f5ddd5d8",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505156145653,
+			"name": "Delete User",
+			"description": "",
+			"collectionId": "2b5f4755-fbd2-0542-7182-ccf238174859",
+			"responses": []
+		},
+		{
+			"id": "47cdaf5e-b4c8-4f8d-0c64-af6fc752d627",
+			"headers": "access_token: {{QA-AccessToken}}\n//Content-Type: application/json; charset=utf-8\nContent-Type: application/json;\n",
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{QA-AccessToken}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json; charset=utf-8",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json;",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://grupoltm-qa-automation.getsandbox.com/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505077377652,
+			"name": "Create User",
+			"description": "",
+			"collectionId": "2b5f4755-fbd2-0542-7182-ccf238174859",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"username\":\"7a53e988-46b1-426b-bade-a621f5ddd5d8\",\r\n\t\"name\":\"João Miguel Eloá\"\r\n}"
+		},
+		{
+			"id": "49b7882e-d563-e013-b768-c1cc21e49ace",
+			"headers": "access_token: {{QA-AccessToken}}\n",
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{QA-AccessToken}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://grupoltm-qa-automation.getsandbox.com/users/Teste3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1504742444588,
+			"name": "Find User By Username",
+			"description": "",
+			"collectionId": "2b5f4755-fbd2-0542-7182-ccf238174859",
+			"responses": []
+		},
+		{
+			"id": "54db6055-b056-9668-017c-49b817abc06f",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAccept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://grupoltm-qa-automation.getsandbox.com/token",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "password",
+					"value": "112233445566"
+				},
+				{
+					"key": "user",
+					"value": "qa"
+				},
+				{
+					"key": "grant_type",
+					"value": "password"
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var data = JSON.parse(responseBody);\n\npostman.setEnvironmentVariable(\"QA-AccessToken\", data.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1504736371344,
+			"name": "Token",
+			"description": "",
+			"collectionId": "2b5f4755-fbd2-0542-7182-ccf238174859",
+			"responses": []
+		},
+		{
+			"id": "daf26ec4-58f2-1fd2-60d3-61478b798927",
+			"headers": "access_token: {{QA-AccessToken}}\n",
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{QA-AccessToken}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://grupoltm-qa-automation.getsandbox.com/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1504736387661,
+			"name": "Get Users",
+			"description": "",
+			"collectionId": "2b5f4755-fbd2-0542-7182-ccf238174859",
+			"responses": []
+		},
+		{
+			"id": "ec89e278-3346-6b97-182b-81386e77ef55",
+			"headers": "Content-Type: application/json\naccess_token: {{QA-AccessToken}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "access_token",
+					"value": "{{QA-AccessToken}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://grupoltm-qa-automation.getsandbox.com/users/Teste1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505156143173,
+			"name": "Update User",
+			"description": "",
+			"collectionId": "2b5f4755-fbd2-0542-7182-ccf238174859",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"Nome teste\"\n}"
+		}
+	]
+}
